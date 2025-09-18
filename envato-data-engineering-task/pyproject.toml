@@ -1,0 +1,17 @@
+[project]
+name = "envato-data-engineering-task"
+version = "0.1.0"
+description = "A Python package for the Envato Data Engineering task."
+readme = "README.md"
+authors = [
+    { name = "Your Name", email = "your_name@email.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+envato-data-engineering-task = "envato_data_engineering_task:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
