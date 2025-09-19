@@ -38,6 +38,7 @@ Run ```cd envato-data-engineering-task/tests/test_envato_data_engineering_task``
 ```pytest test_load.py```
 ```pytest test_transform.py```
 All unit tests passed !
+Please note: Before running pytest, please execute ```python src/envato_data_engineering_task/duckdb_query.py``` first, to clean all tables first. since the unit testing files are copying envato.db from data/raw to tmp location while testing, so if there are legacy data in envato.db, unit testing of test_load.py and test_transform.py would be failed.
 
 **Linting**
 
