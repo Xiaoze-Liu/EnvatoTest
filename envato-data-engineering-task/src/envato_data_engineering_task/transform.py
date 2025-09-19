@@ -10,11 +10,14 @@ import json
 from envato_data_engineering_task.duckdb_connection import db_connection
 
 
-def data_normalization():
+def data_normalization(db_path=None):
     """
     Core function of normalizing data from raw to pokeapi
     """
-    con = db_connection()
+    if db_path: #for unit testing
+        con = db_path
+    else:
+        con = db_connection()
     con.execute("""create schema if not exists pokeapi""")
     con.execute(
         """create table if not exists pokeapi.pokemon

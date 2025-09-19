@@ -25,3 +25,16 @@ Sample:
 **Design decision**
 1. I decided to go with data modelling option 2 of multiple normalized tables, the reason is that it's easier for further dimentional star schema modelling, as well as for business teams for any further analysis, considering some of business team would not have advanced sql skills to unnest array/json
 2. Currently it's full load pattern which means everything you run the command, all existing json files would be looped again, but it won't be duplicated in duckdb because I designed a de-duplication mechanism for being idempotent.
+
+**Unit testing**
+Run ```cd envato-data-engineering-task/tests/test_envato_data_engineering_task```
+```pytest test_extract.py```
+```pytest test_load.py```
+```pytest test_transform.py```
+All unit tests passed !
+
+**Linting**
+As required, core files in /src folder have been linted by Pylint
+
+**Formating**
+As required, core files in /src folder have been formated by Python Black
