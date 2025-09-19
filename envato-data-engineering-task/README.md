@@ -34,7 +34,7 @@ Run ```cd envato-data-engineering-task/tests/test_envato_data_engineering_task``
 All unit tests passed !
 
 **Linting**
-As required, core files in /src folder have been linted by Pylint
+As required, core files in /src folder have been linted by Pylint, all files are rated 10/10
 
 **Formating**
 As required, core files in /src folder have been formated by Python Black
