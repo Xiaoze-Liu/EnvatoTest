@@ -16,7 +16,7 @@ def extract_pkm(pkm_id):
     response = requests.get(url, timeout=10)
     response.raise_for_status()
     data = response.json()
-    data_path = os.path.abspath(os.path.join(os.path.dirname(__file__),"../../../data/raw"))
+    data_path = os.path.abspath(os.path.join(os.path.dirname(__file__),"../../data/raw"))
     with open(f"{data_path}/pokemon_{data['id']}.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
     return data

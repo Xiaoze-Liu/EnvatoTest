@@ -21,7 +21,7 @@ def load_raw_to_duckdb(db_path=None,file_path=None):
     if file_path: #for testing env
         data_path = file_path
     else:
-        data_path = os.path.abspath(os.path.join(os.path.dirname(__file__),"../../../data/raw"))
+        data_path = os.path.abspath(os.path.join(os.path.dirname(__file__),"../../data/raw"))
     for file in os.listdir(data_path):
         with open(f"{data_path}/{file}", encoding="utf-8") as f:
             data = json.load(f)

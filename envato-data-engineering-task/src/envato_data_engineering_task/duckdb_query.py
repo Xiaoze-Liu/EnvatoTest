@@ -3,7 +3,7 @@ import os
 import json
 
 def query():
-    db_path = os.path.abspath(os.path.join(os.path.dirname(__file__),"../../../data/envato.db"))
+    db_path = os.path.abspath(os.path.join(os.path.dirname(__file__),"../../data/envato.db"))
     con = duckdb.connect(db_path)
     # data=con.execute("select count(*) from raw.pokemon_raw").fetchall()
     # print (data)
@@ -16,10 +16,10 @@ def query():
     # print (data)
     # data=con.execute("select data['abilities'] from raw.pokemon_raw").fetchall()
     # print(data)
-    #con.execute("delete from raw.pokemon_raw")
-    #con.execute("delete from pokeapi.pokemon")
-    #con.execute("delete from pokeapi.types")
-    #con.execute("delete from pokeapi.abilities")
+    con.execute("delete from raw.pokemon_raw")
+    con.execute("delete from pokeapi.pokemon")
+    con.execute("delete from pokeapi.types")
+    con.execute("delete from pokeapi.abilities")
     data = con.execute("select * from raw.pokemon_raw").fetchall()
     print(data)
     data = con.execute("select * from pokeapi.pokemon").fetchall()
