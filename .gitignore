@@ -1,0 +1,6 @@
+.vscode
+.venv
+envato-data-engineering-task/src/envato_data_engineering_task/__pycache__
+envato-data-engineering-task/tests/test_envato_data_engineering_task/__pycache__
+*.pyc
+**/__pycache__/

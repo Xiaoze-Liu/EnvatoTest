@@ -7,10 +7,10 @@ authors = [
     { name = "Your Name", email = "your_name@email.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = ["requests","click","pytest","pylint"]
 
 [project.scripts]
-envato-data-engineering-task = "envato_data_engineering_task:main"
+envato-data-engineering-task = "envato_data_engineering_task.entrypoint:main"
 
 [build-system]
 requires = ["hatchling"]
